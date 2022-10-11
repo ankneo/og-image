@@ -53,8 +53,8 @@ function getArray(stringOrArray: string[] | string | undefined): string[] {
 function getDefaultImages(images: string[], theme: Theme): string[] {
     const defaultImage =
       theme === "light"
-        ? "https://cal.com/logo.svg"
-        : "https://cal.com/logo-white.svg";
+        ? "https://vwo.com/downloads/media-kit/VWO-Logo-Color.svg"
+        : "https://vwo.com/downloads/media-kit/VWO-Logo-White.svg";
 
     if (!images || !images[0]) {
         return [defaultImage];

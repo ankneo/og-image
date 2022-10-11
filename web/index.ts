@@ -142,13 +142,13 @@ const markdownOptions: DropdownOption[] = [
 ];
 
 const imageLightOptions: DropdownOption[] = [
-    { text: 'Vercel', value: 'https://cal.com/logo-white.svg' },
+    { text: 'VWO', value: 'https://vwo.com/downloads/media-kit/VWO-Logo-Color.svg' },
     { text: 'Next.js', value: 'https://assets.vercel.com/image/upload/front/assets/design/nextjs-black-logo.svg' },
     { text: 'Hyper', value: 'https://assets.vercel.com/image/upload/front/assets/design/hyper-color-logo.svg' },
 ];
 
 const imageDarkOptions: DropdownOption[] = [
-  { text: "Vercel", value: "https://cal.com/logo.svg" },
+  { text: "VWO", value: "https://vwo.com/downloads/media-kit/VWO-Logo-White.svg" },
   {
     text: "Next.js",
     value:
