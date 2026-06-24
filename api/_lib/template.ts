@@ -142,7 +142,7 @@ function getAvatar(src: string, width = "320", height = "320") {
 }
 
 
-function getLogo(src: string, width ='320', height = '320') {
+function getLogo(src: string, width ='450', height = '450') {
     return `<img
         class="logo"
         alt="Logo"
