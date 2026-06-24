@@ -1,3 +1,4 @@
+process.env.AWS_LAMBDA_JS_RUNTIME = 'nodejs22.x';
 import chromium from '@sparticuz/chromium';
 const exePath = process.platform === 'win32'
 ? 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
