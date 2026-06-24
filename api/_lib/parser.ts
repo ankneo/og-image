@@ -36,7 +36,9 @@ export function parseRequest(req: IncomingMessage) {
         widths: getArray(widths),
         heights: getArray(heights),
     };
-    parsedRequest.images = getDefaultImages(parsedRequest.images, parsedRequest.theme);
+    const host = req.headers.host;
+    const baseUrl = host?.startsWith('localhost') ? `http://${req.headers.host}` : `https://${req.headers.host}`;
+    parsedRequest.images = getDefaultImages(parsedRequest.images, parsedRequest.theme, baseUrl);
     return parsedRequest;
 }
 
@@ -50,11 +52,11 @@ function getArray(stringOrArray: string[] | string | undefined): string[] {
     }
 }
 
-function getDefaultImages(images: string[], theme: Theme): string[] {
+function getDefaultImages(images: string[], theme: Theme, baseUrl: string = ''): string[] {
     const defaultImage =
       theme === "light"
-        ? "https://vwo.com/downloads/media-kit/VWO-Logo-Color.svg"
-        : "https://vwo.com/downloads/media-kit/VWO-Logo-White.svg";
+        ? `${baseUrl}/vwo-abt-logo-light.svg`
+        : `${baseUrl}/vwo-abt-logo-dark.svg`;
 
     if (!images || !images[0]) {
         return [defaultImage];
